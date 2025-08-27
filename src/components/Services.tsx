@@ -35,12 +35,8 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden py-20 px-6 bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white"
+      className="relative overflow-hidden py-20 px-6 bg-white text-gray-900"
     >
-      {/* background glows */}
-      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-600/20 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-sky-500/20 blur-3xl" />
-
       <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
         <div className="text-center">
@@ -49,7 +45,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="opacity-0 translate-y-3 text-3xl md:text-4xl font-bold text-pink-400"
+            className="opacity-0 translate-y-3 text-3xl md:text-4xl font-bold text-indigo-600"
           >
             Our Services
           </motion.h2>
@@ -58,9 +54,10 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.08 }}
-            className="opacity-0 translate-y-3 mt-3 text-neutral-300 max-w-2xl mx-auto"
+            className="opacity-0 translate-y-3 mt-3 text-gray-600 max-w-2xl mx-auto"
           >
-            We work with retailers, wholesalers and distributors — delivering premium, fast-moving products and festive gift solutions.
+            We work with retailers, wholesalers and distributors — delivering
+            premium, fast-moving products and festive gift solutions.
           </motion.p>
 
           {/* animated underline */}
@@ -84,26 +81,24 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="opacity-0 translate-y-4 group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-md p-6 shadow-lg border border-white/10"
+                className="opacity-0 translate-y-4 group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-gray-200 hover:shadow-lg transition"
               >
-                {/* gradient ring on hover */}
-                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 ring-transparent group-hover:ring-2 group-hover:ring-indigo-500/60 transition" />
-
-                {/* sheen highlight */}
-                <div className="pointer-events-none absolute -top-24 right-0 h-48 w-1/2 rotate-12 bg-gradient-to-b from-white/10 to-transparent blur-2xl" />
-
                 {/* Icon */}
                 <div className="relative mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-sky-500 text-white shadow-md">
                   <Icon className="h-6 w-6" />
                 </div>
 
-                <h3 className="text-xl font-semibold">{s.title}</h3>
-                <p className="mt-2 text-sm text-neutral-300 leading-relaxed">{s.desc}</p>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                  {s.desc}
+                </p>
 
-                <ul className="mt-4 space-y-2 text-sm text-neutral-200">
+                <ul className="mt-4 space-y-2 text-sm text-gray-700">
                   {s.points.map((pt) => (
                     <li key={pt} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
                       {pt}
                     </li>
                   ))}
@@ -115,7 +110,7 @@ export default function Services() {
                       const el = document.getElementById("contact");
                       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
                     }}
-                    className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-4 py-2 text-xs font-semibold shadow-md hover:shadow-indigo-500/30 transition"
+                    className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-4 py-2 text-xs font-semibold text-white shadow-md hover:shadow-indigo-500/30 transition"
                   >
                     Enquire Now
                   </button>
@@ -124,18 +119,11 @@ export default function Services() {
                       const el = document.getElementById("pricing");
                       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
                     }}
-                    className="text-xs underline text-neutral-300 hover:text-white transition"
+                    className="text-xs underline text-gray-600 hover:text-indigo-600 transition"
                   >
                     View Pricing
                   </button>
                 </div>
-
-                {/* bottom gradient bar */}
-                <motion.div
-                  initial={false}
-                  whileHover={{ opacity: 1 }}
-                  className="opacity-0 absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-indigo-500 via-sky-400 to-indigo-500"
-                />
               </motion.article>
             );
           })}
@@ -144,4 +132,3 @@ export default function Services() {
     </section>
   );
 }
-

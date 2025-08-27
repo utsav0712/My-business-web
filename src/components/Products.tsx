@@ -140,7 +140,7 @@ function ProductModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
 
@@ -150,12 +150,12 @@ function ProductModal({
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.95, opacity: 0, y: 12 }}
         transition={{ duration: 0.18 }}
-        className="relative bg-gray-900 text-white rounded-2xl max-w-xl w-full mx-4 p-6 shadow-2xl z-60"
+        className="relative bg-white text-gray-800 rounded-2xl max-w-xl w-full mx-4 p-6 shadow-2xl"
       >
         <button
           onClick={onClose}
           aria-label="Close product details"
-          className="absolute top-3 right-3 text-neutral-300 hover:text-white"
+          className="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
         >
           ✕
         </button>
@@ -166,14 +166,14 @@ function ProductModal({
           </div>
 
           <div className="flex-1">
-            <h3 id={`modal-title-${product.id}`} className="text-lg font-semibold">
+            <h3 id={`modal-title-${product.id}`} className="text-lg font-semibold text-gray-900">
               {product.name}
             </h3>
-            <div className="text-xs text-neutral-300 mt-1">{product.description}</div>
+            <div className="text-xs text-gray-500 mt-1">{product.description}</div>
           </div>
         </div>
 
-        <div className="mt-4 text-sm text-neutral-300 leading-relaxed">{product.details}</div>
+        <div className="mt-4 text-sm text-gray-600 leading-relaxed">{product.details}</div>
 
         <div className="mt-6 flex items-center justify-end gap-3">
           <button
@@ -181,13 +181,13 @@ function ProductModal({
               const el = document.getElementById("contact");
               if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-3 py-1 text-xs font-semibold shadow-md hover:shadow-indigo-500/30 transition"
+            className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-3 py-1 text-xs font-semibold text-white shadow-md hover:shadow-indigo-500/30 transition"
           >
             Enquire
           </button>
           <button
             onClick={onClose}
-            className="px-3 py-1 text-xs text-neutral-300 underline hover:text-white transition"
+            className="px-3 py-1 text-xs text-gray-500 underline hover:text-gray-700 transition"
           >
             Close
           </button>
@@ -203,14 +203,13 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="py-20 px-6 bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white relative overflow-hidden"
+      className="py-20 px-6 bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-800 relative overflow-hidden"
     >
-      {/* background glow */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/10 via-sky-800/5 to-transparent blur-3xl pointer-events-none" />
-
       <div className="relative mx-auto max-w-7xl text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-pink-400">Our Products</h2>
-        <p className="text-neutral-300 max-w-2xl mx-auto mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500">
+          Our Products
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
           Premium wholesale products curated for retailers and gift packs —
           bakery, snacks, chocolates, juices and more.
         </p>
@@ -225,14 +224,13 @@ export default function Products() {
               whileHover={{ y: -6, scale: 1.02 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: idx * 0.04 }}
-              className="group relative w-full rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md shadow-lg 
-                         border border-transparent hover:border-indigo-500/50 transition-all duration-300 opacity-0 translate-y-4"
+              className="group relative w-full rounded-2xl overflow-hidden bg-white shadow-md border border-gray-200 hover:border-indigo-300 transition-all duration-300 opacity-0 translate-y-4"
             >
               {/* image */}
               <div className="relative h-44 md:h-52 w-full overflow-hidden">
                 <motion.div
                   initial={false}
-                  whileHover={{ filter: "blur(3px) scale(1.03)" }}
+                  whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                   className="absolute inset-0"
                 >
@@ -246,7 +244,7 @@ export default function Products() {
                 </motion.div>
 
                 {/* overlay name */}
-                <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
                   <div className="text-sm font-semibold text-white tracking-wide">{p.name}</div>
                 </div>
               </div>
@@ -254,10 +252,10 @@ export default function Products() {
               {/* content */}
               <div className="p-4">
                 <div className="flex items-center justify-between">
-                  <div className="text-sm text-neutral-100 font-medium">{p.name}</div>
-                  <div className="text-xs text-indigo-400 font-semibold">Wholesale</div>
+                  <div className="text-sm text-gray-800 font-medium">{p.name}</div>
+                  <div className="text-xs text-indigo-600 font-semibold">Wholesale</div>
                 </div>
-                <p className="mt-2 text-xs text-neutral-300 leading-relaxed">{p.description}</p>
+                <p className="mt-2 text-xs text-gray-600 leading-relaxed">{p.description}</p>
 
                 {/* buttons */}
                 <div className="mt-4 flex items-center justify-between">
@@ -266,13 +264,13 @@ export default function Products() {
                       const el = document.getElementById("contact");
                       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
                     }}
-                    className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-3 py-1 text-xs font-semibold shadow-md hover:shadow-indigo-500/30 transition"
+                    className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-3 py-1 text-xs font-semibold text-white shadow-md hover:shadow-indigo-500/30 transition"
                   >
                     Enquire
                   </button>
                   <button
                     onClick={() => setSelected(p)}
-                    className="text-xs text-neutral-300 underline hover:text-white transition"
+                    className="text-xs text-gray-500 underline hover:text-gray-700 transition"
                   >
                     Details
                   </button>

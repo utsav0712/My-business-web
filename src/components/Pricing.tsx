@@ -43,11 +43,11 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py-20 px-6 bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white relative overflow-hidden"
+      className="py-20 px-6 bg-gradient-to-b from-white via-gray-50 to-white text-gray-900 relative overflow-hidden"
     >
       {/* soft background glows */}
-      <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-indigo-700/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-indigo-200/30 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="text-center mb-8">
@@ -56,7 +56,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl text-pink-400 font-bold"
+            className="text-3xl md:text-4xl text-indigo-600 font-bold"
           >
             Plans & Packages
           </motion.h2>
@@ -65,10 +65,11 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.06 }}
             viewport={{ once: true }}
-            className="mt-3 text-neutral-300 max-w-2xl mx-auto"
+            className="mt-3 text-gray-600 max-w-2xl mx-auto"
           >
-            We tailor pricing to your needs — order size, packaging, and delivery location affect the final quote.
-            Choose a package that best describes your needs and contact us for a customised price.
+            We tailor pricing to your needs — order size, packaging, and delivery
+            location affect the final quote. Choose a package that best describes
+            your needs and contact us for a customised price.
           </motion.p>
         </div>
 
@@ -80,25 +81,25 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: idx * 0.06 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 shadow-lg"
+              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-lg hover:shadow-xl transition"
             >
               {/* accent stripe */}
-              <div className="absolute -top-6 left-6 h-12 w-12 rounded-xl bg-gradient-to-br from-indigo-500 to-sky-400 shadow" />
+              <div className="absolute -top-6 left-6 h-12 w-12 rounded-xl bg-gradient-to-br from-indigo-400 to-sky-300 shadow" />
 
-              <h3 className="text-xl font-semibold">{t.title}</h3>
-              <div className="mt-1 text-sm text-neutral-300">{t.subtitle}</div>
+              <h3 className="text-xl font-semibold text-gray-900">{t.title}</h3>
+              <div className="mt-1 text-sm text-gray-500">{t.subtitle}</div>
 
               <div className="mt-4 space-y-2">
                 {t.features.map((f) => (
                   <div key={f} className="flex items-start gap-3">
                     <span className="mt-1 inline-block h-2 w-2 rounded-full bg-indigo-400" />
-                    <div className="text-sm text-neutral-200">{f}</div>
+                    <div className="text-sm text-gray-700">{f}</div>
                   </div>
                 ))}
               </div>
 
               {/* price placeholder / note */}
-              <div className="mt-6 text-sm text-neutral-300">
+              <div className="mt-6 text-sm text-gray-500">
                 Price varies by quantity, packaging and delivery location.
               </div>
 
@@ -108,25 +109,13 @@ export default function Pricing() {
                     const el = document.getElementById("contact");
                     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
                   }}
-                  className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-4 py-2 text-sm font-semibold shadow-md hover:shadow-indigo-500/30 transition"
+                  className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-4 py-2 text-sm font-semibold text-white shadow-md hover:shadow-indigo-400/30 transition"
                 >
                   {t.cta}
                 </button>
-{/* 
-                <button
-                  onClick={() => {
-                    // quick small action: open contact and prefills? (simple UX)
-                    const el = document.getElementById("contact");
-                    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-                    // could also open modal or set form state for which tier
-                  }}
-                  className="text-sm text-neutral-300 underline hover:text-white transition"
-                >
-                  Tell me more
-                </button> */}
               </div>
 
-              <div className="mt-5 text-xs text-neutral-400">
+              <div className="mt-5 text-xs text-gray-400">
                 We will send a customised quote after discussing your requirements.
               </div>
             </motion.article>
@@ -140,7 +129,7 @@ export default function Pricing() {
               const el = document.getElementById("contact");
               if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-6 py-2 text-sm font-semibold shadow-md hover:shadow-indigo-500/30 transition"
+            className="rounded-full bg-gradient-to-br from-indigo-600 to-sky-500 px-6 py-2 text-sm font-semibold text-white shadow-md hover:shadow-indigo-400/30 transition"
           >
             Contact us for a custom quote
           </button>
