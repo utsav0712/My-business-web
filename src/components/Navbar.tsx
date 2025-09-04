@@ -3,13 +3,13 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const links = ["Home", "About", "Products", "Services", "Testimonials", "Pricing", "Contact"];
+  const links = ["Home", "About", "Products", "Contact"];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-blue-600">Ganpati Enterprises</h1>
+        <h1 className="text-2xl font-bold text-blue-600">Utsav Crockery</h1>
         
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">

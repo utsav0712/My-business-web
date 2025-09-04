@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MessageCircle } from "lucide-react";
 
 const WHATSAPP_NUMBERS = [
-  { id: "sales", label: "WhatsApp 1", number: "919897682976" },
-  { id: "support", label: "WhatsApp 2", number: "918445876886" },
+  { id: "sales", label: "WhatsApp 1", number: "919837517668" },
+  { id: "support", label: "WhatsApp 2", number: "919457991688" },
 ];
 
-const PRIMARY_PHONE = "+919897682976";
-const SALES_EMAIL = "ajay.shamli123@gmail.com";
+const PRIMARY_PHONE = "+919837517668";
+const SALES_EMAIL = "rajang851@gmail.com";
 
 function buildWhatsAppHref(number: string, text?: string) {
   const msg = text ?? "Hello, I would like to enquire about products and pricing.";

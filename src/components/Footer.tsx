@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { MessageCircle, Facebook, Phone, Mail, X, MapPin } from "lucide-react";
 
 const WA_NUMBERS = [
-  { id: "wa1", label: "WhatsApp 1", number: "919897682976" },
-  { id: "wa2", label: "WhatsApp 2", number: "918445876886" },
+  { id: "wa1", label: "WhatsApp 1", number: "919837517668" },
+  { id: "wa2", label: "WhatsApp 2", number: "919457991688" },
 ];
 const FB_PAGE = "https://www.facebook.com/share/1BAp222ui6/";
-const CALL_NUMBER = "+919897682976";
-const MAIL_TO = "ajay.shamli123@gmail.com";
+const CALL_NUMBER = "+919837517668";
+const MAIL_TO = "rajang851@gmail.com";
 
 export default function Footer() {
   const [waOpen, setWaOpen] = useState(false);
@@ -50,18 +50,17 @@ export default function Footer() {
               </div>
               <div>
                 <div className="font-semibold text-lg text-gray-900">
-                  Ganpati Enterprises
+                  Utsav Crockery
                 </div>
                 <div className="text-xs text-gray-500">
-                  Premium snacks, gift packs & bulk supplies
+                  Trusted quality crockery for homes and celebrations.
                 </div>
               </div>
             </div>
 
             <p className="text-sm text-gray-600 max-w-sm">
-              Trusted wholesaler for 30+ years. We supply bakery, biscuits,
-              chocolates, juices, namkeen and curated gift packs across cities
-              including Chandigarh & Delhi.
+              <strong className="text-gray-900">Trusted Retail Partner for 20+ Years</strong><br />
+              At <strong className="text-gray-900">Utsav Crockery –</strong>, we bring elegance and utility together under one roof. For over two decades, our family-run store has been serving customers with a wide variety of crockery, kitchenware, and daily household essentials.
             </p>
 
             <div className="flex items-center gap-3 relative">
@@ -130,7 +129,7 @@ export default function Footer() {
               {/* Facebook */}
               <button
                 onClick={openFacebook}
-                aria-label="Open Ganpati Enterprises Facebook page"
+                aria-label="Open Utsav Crockery Facebook page"
                 className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
                 title="Facebook"
               >
@@ -140,7 +139,7 @@ export default function Footer() {
               {/* Call */}
               <button
                 onClick={openCall}
-                aria-label="Call Ganpati Enterprises"
+                aria-label="Call Utsav Crockery"
                 className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
                 title="Call"
               >
@@ -150,7 +149,7 @@ export default function Footer() {
               {/* Mail */}
               <button
                 onClick={openMail}
-                aria-label="Send email to Ganpati Enterprises"
+                aria-label="Send email to Utsav Crockery"
                 className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
                 title="Email"
               >
@@ -177,8 +176,6 @@ export default function Footer() {
                 "Home",
                 "About",
                 "Products",
-                "Services",
-                "Pricing",
                 "Contact",
               ].map((link) => (
                 <a
@@ -225,7 +222,7 @@ export default function Footer() {
 
         <div className="mt-10 border-t border-gray-200 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
           <div>
-            © {new Date().getFullYear()} Ganpati Enterprises. All rights
+            © 2025 Utsav Crockery. All rights
             reserved.
           </div>
           <div className="mt-3 md:mt-0">

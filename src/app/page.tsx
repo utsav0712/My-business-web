@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 import Home from "../components/Home";
 import About from "../components/About";
 import Products from "../components/Products";
-import Services from "../components/Services";
-import Testimonials from "../components/Testimonials";
-import Pricing from "../components/Pricing";
+// import Services from "../components/Services";
+// import Testimonials from "../components/Testimonials";
+// import Pricing from "../components/Pricing";
 import Contact from "../components/Contact";
 
 export default function Page() {
@@ -16,9 +16,9 @@ export default function Page() {
         <Home />
         <About />
         <Products />
-        <Services />
+        {/* <Services />
         <Testimonials />
-        <Pricing />
+        <Pricing /> */}
         <Contact />
       </main>
       <Footer />

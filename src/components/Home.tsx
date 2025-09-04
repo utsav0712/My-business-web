@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import React from "react";
 
 const IMAGES = [
-  { src: "/images/img1.jpg", name: "Juices" },
-  { src: "/images/img2.jpg", name: "Crisps & Snacks" },
-  { src: "/images/img3.jpg", name: "Chocolates" },
-  { src: "/images/img4.jpg", name: "Bakery items" },
+  { src: "/images/img1.jpg", name: "Dinner set" },
+  { src: "/images/img2.jpg", name: "Glassware set" },
+  { src: "/images/img31.jpg", name: "Festive gifting pack" },
+  { src: "/images/img4.webp", name: "Kitchen Tools" },
 ];
 
 export default function HomeSection() {
@@ -17,107 +17,70 @@ export default function HomeSection() {
   };
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex flex-col justify-center items-center 
-      bg-gradient-to-r from-white via-gray-50 to-white 
-      text-gray-900 px-6"
-    >
-      <div className="grid md:grid-cols-2 gap-12 w-full max-w-6xl items-center">
-        {/* Left Text Section */}
-        <div className="space-y-6">
-          <motion.h1
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold leading-tight text-indigo-700"
-          >
-            Welcome to Ganpati Enterprises!
-          </motion.h1>
-          <motion.p
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-lg md:text-xl text-gray-600"
-          >
-            Your Ultimate Destination For A Wide Variety Of Treats.
-          </motion.p>
+    <section id="home" className="min-h-screen text-gray-900">
+      {/* Hero Section with Background */}
+      <div className="relative h-[80vh] flex items-center justify-center text-center px-6">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/backimage.jpeg" 
+            alt="Crockery Background"
+            fill
+            priority
+            className="w-full h-full object-cover blur-sm"
+          />
+          {/* Dark Overlay for readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        {/* Right Call-to-action */}
+        {/* Foreground Text */}
         <motion.div
-          initial={{ x: 20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="space-y-6 text-center md:text-left"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="space-y-6 max-w-3xl relative z-10"
         >
-          <h2 className="text-2xl md:text-4xl font-semibold text-gray-800">
-            Let’s Create Something Amazing
-          </h2>
-          <p className="text-gray-500">
-            Reach out for services, collaborations, or just a friendly chat.
+          <h1 className="text-6xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+          Welcome to Utsav Crockery!
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-200">
+            Trusted quality crockery & elegant home essentials for every occasion.
           </p>
           <button
             onClick={scrollToContact}
-            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 
-            text-white rounded-xl shadow-md transition"
+            className="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-lg rounded-xl shadow-lg transition"
           >
-            Contact Me
+            Contact Us
           </button>
         </motion.div>
       </div>
 
-      {/* Image Cards */}
-      <div className="mt-16 w-full">
-        <div className="mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-6 items-center px-6">
+      {/* Product Grid */}
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 text-center mb-10"
+        ><br />
+          Explore Our Collection
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {IMAGES.map((img) => (
-            <motion.button
+            <motion.div
               key={img.src}
-              whileHover="hover"
-              initial="rest"
-              animate="rest"
-              className="relative overflow-hidden rounded-xl block 
-              focus:outline-none focus:ring-4 focus:ring-indigo-300"
-              tabIndex={0}
-              aria-label={img.name}
-              style={{ height: 208 }}
+              whileHover={{ scale: 1.05 }}
+              className="relative rounded-2xl overflow-hidden shadow-lg bg-white/60 backdrop-blur-lg border border-gray-200"
+              style={{ height: 240 }}
             >
-              {/* Image */}
-              <motion.div
-                variants={{
-                  rest: { filter: "blur(0px) scale(1)" },
-                  hover: { filter: "blur(3px) scale(1.03)" },
-                }}
-                transition={{ duration: 0.35 }}
-                className="relative w-full h-full"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.name}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  priority={false}
-                />
-              </motion.div>
-
-              {/* Overlay Name */}
-              <motion.div
-                variants={{
-                  rest: { opacity: 0, translateY: 10 },
-                  hover: { opacity: 1, translateY: 0 },
-                }}
-                transition={{ duration: 0.28 }}
-                className="pointer-events-none absolute inset-0 flex items-end justify-center 
-                bg-gradient-to-t from-black/50 to-transparent p-4"
-              >
-                <div className="text-center">
-                  <div className="text-sm font-medium text-white">
-                    {img.name}
-                  </div>
-                </div>
-              </motion.div>
-            </motion.button>
+              <Image
+                src={img.src}
+                alt={img.name}
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+              <div className="absolute bottom-0 w-full bg-black/50 text-white text-center py-2 text-sm font-medium">
+                {img.name}
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

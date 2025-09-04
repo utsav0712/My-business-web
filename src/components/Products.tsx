@@ -15,107 +15,107 @@ type Product = {
 const PRODUCTS: Product[] = [
   {
     id: 1,
-    src: "/images/products/p1.jpg",
-    name: "Bakery Delight",
-    description: "Freshly baked breads and cakes, soft and delicious.",
+    src: "/images/products/p1.avif",
+    name: "Elegant Dinner Set",
+    description: "Premium ceramic dinner set for family meals.",
     details:
-      "Our Bakery Delight range includes artisan breads, muffins and layered cakes made daily using quality ingredients.Made with premium ingredients, these cookies offer a perfect balance of buttery richness and chocolatey goodness.                Ingredients are flour, sugar, fats, 100% Eggless ",
+      "Includes plates, bowls, and serving dishes. Microwave safe, chip-resistant and durable for everyday use.",
   },
   {
     id: 2,
-    src: "/images/products/p2.jpg",
-    name: "Assorted Biscuits",
-    description: "Crispy, crunchy biscuits in assorted flavors.",
+    src: "/images/products/p2.avif",
+    name: "Classic Tea Set",
+    description: "Porcelain tea cups with matching saucers.",
     details:
-      "Assorted Biscuits collection: butter, chocolate cream, digestive and many more. Long shelf life with attractive wholesale pricing. Ingredients are flour, fat, and a leavening agent, milk, sugar, 100% Eggless",
+      "Perfect for evening tea time, available in multiple designs and colors.",
   },
   {
     id: 3,
     src: "/images/products/p3.jpg",
-    name: "Premium Chocolates",
-    description: "Rich, smooth chocolates perfect for gifting.",
+    name: "Crystal Glass Set",
+    description: "Stylish glasses for water, juice, or cocktails.",
     details:
-      "Premium Chocolates — wafer, truffles, and bars with dark, milk and flavored varieties. Ingredients are sugar, refined wheat flour, milk solids, cocoa solids, and vegetable fats, emulsifier, powder milk.",
+      "Made from high-quality glass, scratch-resistant and dishwasher safe.",
   },
   {
     id: 4,
     src: "/images/products/p4.jpg",
-    name: "Real Fruit Juice",
-    description: "Refreshing juices made with real fruits.",
+    name: "Designer Serving Bowls",
+    description: "Perfect for salads, snacks, or curries.",
     details:
-      "Real juice, specifically Real Fruit Power Mixed Fruit juice, contains a mix of fruit concentrates and purees, including apple, orange, guava, apricot, mango, banana, lime, and passion fruit. It also includes sugar, acidity regulator, antioxidant, stabilizer, permitted natural color, and added natural and nature-identical flavor and No added preservatives. ",
+      "Available in ceramic, glass, and stainless steel.",
   },
   {
     id: 5,
-    src: "/images/products/p5.jpg",
-    name: "Lahori Jeera",
-    description: "Traditional masala with authentic Lahori taste.",
+    src: "/images/products/p5.webp",
+    name: "Storage Containers",
+    description: "Keep your food fresh with airtight plastic containers.",
     details:
-      "Lahori Zeera (or Zeera) contains ingredients like purified carbonated water, sugar, lemon juice concentrate, black salt, cumin seed, black pepper, dry ginger powder, and natural flavors and colors."
+      "BPA free, stackable, and easy to clean. Available in multiple sizes."
   },
   {
     id: 6,
-    src: "/images/products/p6.jpg",
-    name: "Spicy Namkeen",
-    description: "Crispy namkeen with a spicy twist for snack time.",
+    src: "/images/products/p6.webp",
+    name: "Essential Kitchen Tools",
+    description: "Durable spoons, spatulas, and ladles.",
     details:
-      "Bikano namkeen ingredients vary by product, but commonly include edible vegetable oils, chickpea flour (besan), split lentils (dal), peanuts, dried green peas, rice flakes, cornflakes, dried fruits (like raisins), and a blend of spices such as red chilli powder, turmeric, cumin, and coriander.",
+      "Made from stainless steel and food-grade silicone.",
   },
   {
     id: 7,
-    src: "/images/products/p7.jpg",
-    name: "Kurkure Pack",
-    description: "Fun, crunchy snack loved by everyone.",
+    src: "/images/products/pi7.jpg",
+    name: "Non-Stick Cookware Set",
+    description: "Cook healthier meals with less oil.",
     details:
-      "Kurkure ingredients vary by flavor but typically include rice meal, corn meal, gram meal, and edible vegetable oil, along with seasonings like spices (chili, onion, garlic), salt, sugar, and citric acid.",
+      "Scratch-resistant, induction-compatible, and easy to clean.",
   },
   {
     id: 8,
-    src: "/images/products/p8.jpg",
-    name: "Lays Chips",
-    description: "Light, crispy potato chips in classic flavor.",
+    src: "/images/products/pi8.jpg",
+    name: "360° Spin Mop Set",
+    description: "Easy-to-use mop with bucket and wringer.",
     details:
-      "Lay's ingredients vary by flavor but typically include potatoes, edible vegetable oil, salt, and flavorings. For instance, classic Lay's chips often contain potatoes, corn oil, and salt, while other flavors add ingredients like sugar, spices, and cheese powder for their distinct tastes. ",
+      "Includes microfiber mop head, adjustable handle, and sturdy bucket with wheels. Ideal for effortless home cleaning.",
   },
   {
     id: 9,
-    src: "/images/products/p9.jpg",
-    name: "Panchvati Namkeen",
-    description: "Authentic Panchvati namkeen mix, perfect for tea time.",
+    src: "/images/products/pi9.webp",
+    name: "Elegant Cup Set",
+    description: "Stylish tea & coffee cup set for daily use and gifting.",
     details:
-      "Panchwati namkeen ingredients vary by product, but common components include gram pulse flour, moth pulse flour, edible vegetable oil, and various spices (like red chili powder, turmeric, and asafoetida). Specific products can also contain other ingredients such as peanuts, lentils (masoor, mung), wheat flour, rice flakes, cornflakes, raisins, and sugar. ",
+      "Crafted from premium ceramic with a smooth finish. Perfect for serving tea, coffee, or hot beverages. Available in multiple designs and ideal for family use or festive gifting.",
   },
   {
     id: 10,
-    src: "/images/products/p10.jpg",
-    name: "Satmola Namkeen",
-    description: "Tangy, spicy Satmola namkeen with a desi touch.",
+    src: "/images/products/pi10.jpg",
+    name: "Designer Tray Set",
+    description: "Durable and elegant trays for serving in style.",
     details:
-      "Satmola namkeen ingredients vary by product, but generally include gram flour, edible vegetable oil, rice flakes, peanuts, sago, lentils, and spices and condiments like turmeric, cumin, chilli, and mango powder. Specific ingredients in a Satmola namkeen product, like the Khatta Meetha Namkeen, also include sugar powder, salt, and citric acid, while other varieties, such as Bikaneri Bhujia, feature a secret blend of spices.",
+      "Perfect for daily use as well as special occasions. Made from high-quality materials with attractive prints and finishes. Available in multiple sizes, lightweight yet sturdy, ideal for tea, snacks, and festive serving.",
   },
   {
     id: 11,
-    src: "/images/products/p11.jpg",
-    name: "Kamla Rusk",
-    description: "Crispy golden rusk, best paired with tea.",
+    src: "/images/products/pi11.webp",
+    name: "Snacks & Dry Fruit Serving Box",
+    description: "Stylish serving box for snacks, sweets, namkeen and dry fruit box for gifting & storage.",
     details:
-      "Kamla Rusk: twice-baked rusks with a golden crunch. Perfect companion for tea/coffee and ideal for small cafes or retail snack aisles. Rusk is manufactured from wheat flour, salt and a raising agent by a traditionally slow process of baking, drying, gristing and blending to produce a consistently high quality product.",
+      "Made from premium quality material with elegant design. Ideal for parties, festive occasions, and daily serving. Lightweight, durable, and available in multiple partitions.Perfect for weddings, festivals, and gifting. Available in decorative finishes, multiple sections for dry fruits, chocolates, and sweets. Combines utility with elegance.",
   },
   {
     id: 12,
-    src: "/images/products/p12.jpg",
-    name: "Fun Top-Sauce",
-    description: "Tangy tomato sauce to make meals tastier.",
+    src: "/images/products/pi12.jpg",
+    name: "Bathroom Set",
+    description: "Complete bathroom accessory set for daily use.",
     details:
-      "FunTop sauces contain vegetable pulp, sugar, salt, and spices, with specific ingredients varying by product. The Continental Sauce includes vegetable pulp, sugar, salt, onion powder, garlic powder, chili powder, and common condiments, plus regulators like E260 (acetic acid) and thickeners such as E1422 and E415. ",
+      "Includes soap dispenser, toothbrush holder, tumbler, and soap dish. Made from high-quality plastic/ceramic with modern design. Durable, easy to clean, and available in elegant colors to enhance your bathroom look.",
   },
   {
     id: 13,
-    src: "/images/products/p13.jpg",
-    name: "Satmola Tablets",
-    description: "Digestive tablets with tangy masala punch.",
+    src: "/images/products/pi13.webp",
+    name: "Portable Swimming Pool",
+    description: "Foldable & durable swimming pool for kids and family use.",
     details:
-      "Satmola tablets contain a blend of natural digestive ingredients like cumin (jeera), black pepper (kali mirch), and ginger (shunthi), along with other traditional spices and herbs such as imli (tamarind) and mint.",
+      "Made with heavy-duty PVC material, easy to set up and fold. Perfect for kids’ fun, summer relaxation, and outdoor activities. Available in multiple sizes and safe for home use.",
   },
 ];
 
@@ -206,12 +206,11 @@ export default function Products() {
       className="py-20 px-6 bg-gradient-to-b from-gray-50 via-white to-gray-100 text-gray-800 relative overflow-hidden"
     >
       <div className="relative mx-auto max-w-7xl text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500">
+        <h2 className="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
           Our Products
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Premium wholesale products curated for retailers and gift packs —
-          bakery, snacks, chocolates, juices and more.
+          Trusted retailer partner for retailers — premium crockery, kitchenware, and gift collections.
         </p>
 
         {/* grid */}
@@ -253,7 +252,7 @@ export default function Products() {
               <div className="p-4">
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-800 font-medium">{p.name}</div>
-                  <div className="text-xs text-indigo-600 font-semibold">Wholesale</div>
+                  <div className="text-xs text-indigo-600 font-semibold">Retail</div>
                 </div>
                 <p className="mt-2 text-xs text-gray-600 leading-relaxed">{p.description}</p>
 
